@@ -108,10 +108,8 @@ local function setup_highlights(palette, opts)
 	hi("Number", { link = "Constant" })
 	hi("Boolean", { link = "Constant" })
 	hi("Float", { link = "Constant" })
-
 	hi("Identifier", { fg = colors.fg })
 	hi("Function", { fg = colors.green })
-
 	hi("Statement", { fg = colors.pink })
 	hi("Conditional", { fg = colors.pink })
 	hi("Repeat", { fg = colors.pink })
@@ -119,7 +117,6 @@ local function setup_highlights(palette, opts)
 	hi("Operator", { fg = colors.pink })
 	hi("Keyword", { fg = colors.pink })
 	hi("Exception", { fg = colors.pink })
-
 	hi("PreProc", { fg = colors.pink })
 	hi("Include", { fg = colors.pink })
 	hi("Define", { fg = colors.pink })
@@ -128,7 +125,6 @@ local function setup_highlights(palette, opts)
 	hi("StorageClass", { fg = colors.pink })
 	hi("Structure", { fg = colors.pink })
 	hi("Typedef", { fg = colors.pink })
-
 	hi("Type", { fg = colors.cyan, italic = opts.italic })
 	hi("Delimiter", { fg = colors.fg })
 	hi("Special", { fg = colors.pink })
@@ -240,6 +236,67 @@ local function setup_highlights(palette, opts)
 		hi("@markup.raw", { fg = colors.yellow })
 		hi("@markup.list", { fg = colors.pink })
 	end
+
+	-- Lualine
+	hi("LualineNormal", { fg = colors.fg, bg = colors.bgdark })
+	hi("LualineInsert", { fg = colors.bg, bg = colors.green, bold = opts.bold })
+	hi("LualineVisual", { fg = colors.bg, bg = colors.purple, bold = opts.bold })
+	hi("LualineReplace", { fg = colors.bg, bg = colors.orange, bold = opts.bold })
+	hi("LualineCommand", { fg = colors.bg, bg = colors.yellow, bold = opts.bold })
+	hi("LualineInactive", { fg = colors.comment, bg = colors.bglight })
+
+	-- Telescope
+	hi("TelescopeBorder", { fg = colors.comment, bg = colors.bgdark })
+	hi("TelescopePromptBorder", { fg = colors.comment, bg = colors.bgdark })
+	hi("TelescopePromptNormal", { fg = colors.fg, bg = colors.bgdark })
+	hi("TelescopeNormal", { fg = colors.fg, bg = colors.bgdark })
+	hi("TelescopeSelection", { bg = colors.selection })
+	hi("TelescopeMatching", { fg = colors.cyan, bold = opts.bold })
+
+	-- Noice
+	hi("NoiceCmdlinePopupBorder", { fg = colors.comment, bg = colors.bgdark })
+	hi("NoiceCmdlinePopupTitle", { fg = colors.purple, bold = opts.bold })
+	hi("NoiceLspProgressTitle", { fg = colors.cyan })
+	hi("NoiceLspProgressClient", { fg = colors.green })
+	hi("NoiceLspProgressSpinner", { fg = colors.yellow })
+
+	-- Which-key
+	hi("WhichKey", { fg = colors.purple, bold = opts.bold })
+	hi("WhichKeyGroup", { fg = colors.cyan })
+	hi("WhichKeyDesc", { fg = colors.green })
+	hi("WhichKeySeparator", { fg = colors.comment })
+	hi("WhichKeyFloat", { bg = colors.bgdark })
+
+	-- Indent-blankline
+	hi("IndentBlanklineChar", { fg = colors.subtle })
+	hi("IndentBlanklineContextChar", { fg = colors.cyan })
+	hi("IndentBlanklineSpaceCharBlankline", { fg = colors.subtle })
+
+	-- Navic
+	hi("NavicText", { fg = colors.fg })
+	hi("NavicSeparator", { fg = colors.comment })
+
+	-- Notify
+	hi("NotifyBackground", { bg = colors.bgdark })
+	hi("NotifyINFOBorder", { fg = colors.cyan })
+	hi("NotifyWARNBorder", { fg = colors.orange })
+	hi("NotifyERRORBorder", { fg = colors.red })
+	hi("NotifyDEBUGBorder", { fg = colors.comment })
+	hi("NotifyTRACEBorder", { fg = colors.purple })
+	hi("NotifyINFOIcon", { fg = colors.cyan })
+	hi("NotifyERRORTitle", { fg = colors.red, bold = opts.bold })
+
+	-- Dressing
+	hi("FloatBorder", { fg = colors.comment, bg = colors.bgdark })
+	hi("NormalFloat", { fg = colors.fg, bg = colors.bgdark })
+
+	-- Alpha / Dashboard
+	hi("AlphaHeader", { fg = colors.cyan })
+	hi("AlphaButtons", { fg = colors.purple })
+	hi("AlphaShortcut", { fg = colors.orange })
+	hi("DashboardHeader", { fg = colors.cyan })
+	hi("DashboardCenter", { fg = colors.fg })
+	hi("DashboardFooter", { fg = colors.comment })
 
 	return highlights
 end
